@@ -1,37 +1,11 @@
 // app/contact/page.tsx
 'use client';
 
-import { useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // Handle form submission success
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormData({ name: '', email: '', subject: '', message: '' });
-  };
+  
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -44,11 +18,11 @@ export default function Contact() {
         <div className="max-w-2xl mx-auto">
           <h1 className="text-3xl font-bold mb-8">Contact Support</h1>
 
-          {isSubmitted ? (
+          {  
             <div className="bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded mb-6">
               <p>Thank you for contacting us! We&apos;ve received your request and will get back to you as soon as possible.</p>
             </div>
-          ) : null}
+          }
 
                   <div className="bg-white p-8 rounded-lg shadow-md">
                       <div className="flex flex-col">

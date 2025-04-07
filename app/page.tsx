@@ -88,7 +88,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-4">
           <p className="text-center text-gray-600 mb-8">Trusted by dating-app users in over 30 countries</p>
           <div className="flex flex-wrap justify-center gap-8 md:gap-16">
-            {['USA 🇺🇸', 'Canada ', 'Canada 🇨🇦', 'UK 🇬🇧', 'Australia 🇦🇺'].map((app) => (
+            {['USA 🇺🇸', 'Canada 🇨🇦', 'UK 🇬🇧', 'Australia 🇦🇺'].map((app) => (
               <div key={app} className="text-gray-400 font-bold text-xl">{app}</div>
             ))}
           </div>
